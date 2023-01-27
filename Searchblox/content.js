@@ -48,7 +48,7 @@ const post = async (url, body) => {
 const search = document.getElementById('sbx-search');
 const input = document.getElementById('sbx-input');
 const status = document.getElementById('sbx-status');
-const icon = document.getElementById('sbx-userId');
+const icon = document.getElementById('sbx-user');
 const bar = document.getElementById('sbx-bar');
 
 search.src = getURL('images/search.png');
@@ -201,7 +201,7 @@ async function findTarget(imageUrl, place) {
   
       const [join] = document.querySelectorAll(`[data-id="${targetServerId}"]`);
       join.onclick = () => chrome.runtime.sendMessage({ message: { place, id: targetServerId } });
-      status.innerText = 'Target Located';
+      status.innerText = 'User Found';
     });
   } else {
     color(canceled ? COLORS.BLUE : COLORS.RED);
@@ -250,7 +250,7 @@ function renderServers() {
 
     const [join] = document.querySelectorAll(`[data-id="${targetServerId}"]`);
     join.onclick = () => chrome.runtime.sendMessage({ message: { place, id: targetServerId } });
-    status.innerText = 'Target Located';
+    status.innerText = 'User Found';
   });
 };
 
@@ -266,7 +266,7 @@ async function find(imageUrl, place) {
   targetsChecked = 0;
   maxPlayers = 0;
 
-  status.innerText = 'Tracking...';
+  status.innerText = 'Tracking User...';
   color(COLORS.BLUE);
   search.src = getURL('images/cancel.png');
   icon.src = getURL('images/user-success.png');
