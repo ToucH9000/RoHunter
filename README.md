@@ -1,4 +1,2 @@
 # Searchblox
-
-Based on UserID</br>
-Working on autojoin currently.
+Based on UserID
