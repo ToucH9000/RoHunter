@@ -205,7 +205,7 @@ async function findTarget(imageUrl, place) {
     });
   } else {
     color(canceled ? COLORS.BLUE : COLORS.RED);
-    status.innerText = canceled ? 'Canceled search' : 'Target not found!';
+    status.innerText = canceled ? 'Canceled search' : 'Nope';
   }
 
   searching = false;
