@@ -201,7 +201,7 @@ async function findTarget(imageUrl, place) {
   
       const [join] = document.querySelectorAll(`[data-id="${targetServerId}"]`);
       join.onclick = () => chrome.runtime.sendMessage({ message: { place, id: targetServerId } });
-      status.innerText = 'User Located';
+      status.innerText = 'UwU';
     });
   } else {
     color(canceled ? COLORS.BLUE : COLORS.RED);
@@ -250,7 +250,7 @@ function renderServers() {
 
     const [join] = document.querySelectorAll(`[data-id="${targetServerId}"]`);
     join.onclick = () => chrome.runtime.sendMessage({ message: { place, id: targetServerId } });
-    status.innerText = 'User Located';
+    status.innerText = 'UwU';
   });
 };
 
@@ -266,7 +266,7 @@ async function find(imageUrl, place) {
   targetsChecked = 0;
   maxPlayers = 0;
 
-  status.innerText = 'Tracking User...';
+  status.innerText = 'Tracking Prey...';
   color(COLORS.BLUE);
   search.src = getURL('images/cancel.png');
   icon.src = getURL('images/user-success.png');
@@ -292,7 +292,7 @@ search.addEventListener('click', async event => {
   if (user.errors || user.errorMessage) {
     icon.src = USER.ERROR;
     searching = false;
-    status.innerText = 'User not found!';
+    status.innerText = '>:C';
     return;
   }
 
