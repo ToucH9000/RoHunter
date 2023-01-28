@@ -189,7 +189,7 @@ async function findTarget(imageUrl, place) {
         <div class="section-left rbx-game-server-details'">
         <div class="text-info rbx-game-status rbx-game-server-status'">${thumbnails.length} of ${maxPlayers} people max</div>
         <span>
-        <button data-id="${targetServerId}" type="button" class="btn-full-width btn-control-xs rbx-game-server-join btn-primary-md btn-min-width">Join</button>
+        <button data-id="${targetServerId}" type="button" class="btn-full-width btn-control-xs rbx-game-server-join btn-primary-md btn-min-width">Yeet</button>
         </span>
         </div>
         <div class="section-right rbx-game-server-players">
@@ -205,7 +205,7 @@ async function findTarget(imageUrl, place) {
     });
   } else {
     color(canceled ? COLORS.BLUE : COLORS.RED);
-    status.innerText = canceled ? 'Canceled search' : 'Nope';
+    status.innerText = canceled ? 'Canceled search' : 'Prey Fled';
   }
 
   searching = false;
@@ -238,7 +238,7 @@ function renderServers() {
       <div class="section-left rbx-game-server-details'">
       <div class="text-info rbx-game-status rbx-game-server-status'">${thumbnails.length} of ${maxPlayers} people max</div>
       <span>
-      <button data-id="${targetServerId}" type="button" class="btn-full-width btn-control-xs rbx-game-server-join btn-primary-md btn-min-width">Join</button>
+      <button data-id="${targetServerId}" type="button" class="btn-full-width btn-control-xs rbx-game-server-join btn-primary-md btn-min-width">Yeet</button>
       </span>
       </div>
       <div class="section-right rbx-game-server-players">
@@ -292,7 +292,7 @@ search.addEventListener('click', async event => {
   if (user.errors || user.errorMessage) {
     icon.src = USER.ERROR;
     searching = false;
-    status.innerText = '>:C';
+    status.innerText = 'Prey Not Found!';
     return;
   }
 
