@@ -189,7 +189,7 @@ async function findTarget(imageUrl, place) {
         <div class="section-left rbx-game-server-details'">
         <div class="text-info rbx-game-status rbx-game-server-status'">${thumbnails.length} of ${maxPlayers} people max</div>
         <span>
-        <button data-id="${targetServerId}" type="button" class="btn-full-width btn-control-xs rbx-game-server-join btn-primary-md btn-min-width">Yeet</button>
+        <button data-id="${targetServerId}" type="button" class="btn-full-width btn-control-xs rbx-game-server-join btn-primary-md btn-min-width">Hunt</button>
         </span>
         </div>
         <div class="section-right rbx-game-server-players">
@@ -201,7 +201,7 @@ async function findTarget(imageUrl, place) {
   
       const [join] = document.querySelectorAll(`[data-id="${targetServerId}"]`);
       join.onclick = () => chrome.runtime.sendMessage({ message: { place, id: targetServerId } });
-      status.innerText = 'UwU';
+      status.innerText = 'Prey Found';
     });
   } else {
     color(canceled ? COLORS.BLUE : COLORS.RED);
@@ -238,7 +238,7 @@ function renderServers() {
       <div class="section-left rbx-game-server-details'">
       <div class="text-info rbx-game-status rbx-game-server-status'">${thumbnails.length} of ${maxPlayers} people max</div>
       <span>
-      <button data-id="${targetServerId}" type="button" class="btn-full-width btn-control-xs rbx-game-server-join btn-primary-md btn-min-width">Yeet</button>
+      <button data-id="${targetServerId}" type="button" class="btn-full-width btn-control-xs rbx-game-server-join btn-primary-md btn-min-width">Hunt</button>
       </span>
       </div>
       <div class="section-right rbx-game-server-players">
@@ -250,7 +250,7 @@ function renderServers() {
 
     const [join] = document.querySelectorAll(`[data-id="${targetServerId}"]`);
     join.onclick = () => chrome.runtime.sendMessage({ message: { place, id: targetServerId } });
-    status.innerText = 'UwU';
+    status.innerText = 'Prey Found';
   });
 };
 
