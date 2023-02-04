@@ -1,7 +1,7 @@
 {
   "name": "RoHunter",
   "manifest_version": 3,
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Hunt Roblox servers for a desired player",
   "icons": {
     "16": "images/16x16.png",
