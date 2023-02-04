@@ -21,7 +21,7 @@ const get = async (url) => {
 
     return await request.json();
   } catch (error) {
-    await sleep(0.2);
+    await sleep(0.1);
     return await get(url);
   }
 };
@@ -40,7 +40,7 @@ const post = async (url, body) => {
 
     return await request.json();
   } catch (error) {
-    await sleep(0.2);
+    await sleep(0.1);
     return await post(url, body);
   }
 };
@@ -83,7 +83,7 @@ const allThumbnails = new Map();
 async function fetchServers(place = '', cursor = '', attempts = 0) {
   const { nextPageCursor, data } = await get(`games.roblox.com/v1/games/${place}/servers/Public?limit=100&cursor=${cursor}`);
 
-  if (attempts >= 30) {
+  if (attempts >= 60) {
     foundAllServers = true;
     return;
   }
